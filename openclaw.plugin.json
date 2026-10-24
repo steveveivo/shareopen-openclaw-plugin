@@ -1,0 +1,151 @@
+{
+  "id": "shareopen",
+  "activation": {
+    "onStartup": true
+  },
+  "channels": [
+    "shareopen"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "wsUrl": {
+        "type": "string",
+        "description": "ShareOpen WebSocket URL (e.g., ws://localhost:3021/ws/agent)"
+      },
+      "token": {
+        "type": "string",
+        "description": "ShareOpen agent token for WS authentication"
+      },
+      "agentId": {
+        "type": "string",
+        "description": "OpenClaw agent ID to route messages to (e.g., green)"
+      },
+      "name": {
+        "type": "string"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "dmPolicy": {
+        "default": "open",
+        "type": "string",
+        "enum": [
+          "pairing",
+          "allowlist",
+          "open",
+          "disabled"
+        ]
+      }
+    },
+    "required": [
+      "wsUrl",
+      "token",
+      "agentId"
+    ]
+  },
+  "channelConfigs": {
+  "shareopen": {
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether this channel is enabled."
+        },
+        "wsUrl": {
+          "type": "string",
+          "description": "ShareOpen WebSocket URL (e.g., ws://localhost:3021/ws/agent)"
+        },
+        "token": {
+          "type": "string",
+          "description": "ShareOpen agent token for WS authentication"
+        },
+        "agentId": {
+          "type": "string",
+          "description": "ShareOpen agent ID (agent record on the ShareOpen instance, e.g., hermes_xxx)"
+        },
+        "dmPolicy": {
+          "default": "open",
+          "type": "string",
+          "enum": [
+            "pairing",
+            "allowlist",
+            "open",
+            "disabled"
+          ]
+        },
+        "allowFrom": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "description": "Allowlist of user IDs permitted to DM the bot."
+        },
+        "accounts": {
+          "type": "object",
+          "description": "Per-account config overrides (multi-account). Each entry: { wsUrl, token, agentId, agents[] } where agents[] lists OpenClaw agent ids bound to this account.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "wsUrl": { "type": "string" },
+              "token": { "type": "string" },
+              "agentId": { "type": "string" },
+              "agents": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "OpenClaw agent ids that use this account"
+              }
+            },
+            "required": ["token"]
+          }
+        }
+      },
+        "required": [
+          "wsUrl",
+          "token",
+          "agentId",
+          "dmPolicy"
+        ],
+        "additionalProperties": false
+      },
+      "label": "ShareOpen",
+      "description": "ShareOpen IM platform \u2014 local Agent IM via WebSocket gateway.",
+      "uiHints": {
+        "": {
+          "label": "ShareOpen",
+          "help": "ShareOpen channel configuration for local IM platform integration."
+        },
+        "wsUrl": {
+          "label": "WebSocket URL",
+          "help": "ShareOpen WebSocket endpoint for agent communication."
+        },
+        "token": {
+          "label": "Agent Token",
+          "help": "Authentication token for WS connection."
+        },
+        "agentId": {
+          "label": "Agent ID",
+          "help": "OpenClaw agent identifier (e.g., 'green')."
+        },
+        "dmPolicy": {
+          "label": "DM Policy",
+          "help": "Direct message access control. 'open' allows all DMs."
+        }
+      }
+    }
+  }
+}

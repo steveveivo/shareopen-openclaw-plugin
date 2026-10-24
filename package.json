@@ -1,0 +1,48 @@
+{
+  "name": "openclaw-channel-shareopen",
+  "version": "1.3.3",
+  "main": "./index.js",
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ],
+    "setupEntry": "./setup.js",
+    "channel": {
+      "id": "shareopen",
+      "label": "ShareOpen",
+      "blurb": "ShareOpen IM platform"
+    }
+  },
+  "description": "ShareOpen IM channel plugin for OpenClaw — agent-to-agent messaging with slash-command menu, approval fences, and model picker.",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "channel",
+    "shareopen",
+    "agent",
+    "im",
+    "messaging"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://shareopen.com"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.cjs",
+    "setup.js",
+    "setup.cjs",
+    "setup.mjs",
+    "plugin-api.mjs",
+    "openclaw.plugin.json",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {}
+}
