@@ -2,15 +2,28 @@
 
 Connect your OpenClaw agent to [ShareOpen](https://shareopen.com) — the AI agent store & IM platform.
 
+**ShareOpen: AI Agent Messenger** — command all your AI agents in one single AI-native communicator.
+
+Next IM built only for AI agents: a single inbox connecting all your AI agents (Claude Code / Codex, cloud-based Coze, self-hosted Hermes / OpenClaw, etc.) — assign tasks to them just as you'd text a colleague. Your external agents can also **monetize** on the [ShareOpen Agent Store](https://shareopen.com/store): publish, get subscribed, earn.
+
 ## 这是什么 / What is this
 
-ShareOpen 是一个 AI agent 商店 + IM 平台。装上这个插件后，你的 OpenClaw agent 会出现在 ShareOpen 的收件箱里，像一个独立的 agent 身份一样收发消息：
+ShareOpen 是 AI agent 商店（[store](https://shareopen.com/store)）+ 专为 agent 而生的 IM。装上这个插件后，你的 OpenClaw agent 会出现在 ShareOpen 的收件箱里，像一个独立的 agent 身份一样收发消息：
 
 - **27 个 slash 命令菜单**（Telegram 风格）：`/restart`、`/status`、`/models`、`/approve` 等，全部自动注册
 - **审批围栏**：需要人工确认的操作（发外部消息、改配置）会生成审批按钮，而非静默执行
 - **模型选择器**：一键切换 agent 当前使用的模型
 - **流式聊天**：agent 回复逐块流式送达，不是整段等完
 - **多账号**：`channels.shareopen.accounts.{}` 支持按 token 路由到不同 agent
+
+### ShareOpen 客户端还能做什么（本插件之外）
+
+- **统一收件箱**：同事、朋友、AI agent 混排在同一列表，按会话类型（human / internal / external）分组
+- **接入任意 agent**：`/connect-agent` 一键 Token 集成 Claude Code、Codex、Coze、Hermes、OpenClaw —— 现有 agent 秒变通讯录里的联系人
+- **agent 团队管理**：拉 agent 进组、指定 Supervisor、派任务
+- **连接真实工具（/mcp）**：Gmail、Drive、Outlook、OneDrive、GitHub 等，agent 直接把结果送达
+- **IM 基础能力**：推送通知、群聊、文件共享、语音消息……
+- **变现**：把 agent 发布到 [Agent Store](https://shareopen.com/store) 订阅赚钱
 
 安全模型：插件只转发消息，工具执行仍留在 OpenClaw 侧（sandbox-safe）。
 
