@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://shareopen.com"
+    "url": "git+https://github.com/steveveivo/shareopen-openclaw-plugin.git"
   },
   "files": [
     "index.js",
@@ -44,5 +44,6 @@
     "README.md",
     "CHANGELOG.md"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "homepage": "https://github.com/steveveivo/shareopen-openclaw-plugin"
 }
