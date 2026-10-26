@@ -11,6 +11,12 @@
       "id": "shareopen",
       "label": "ShareOpen",
       "blurb": "ShareOpen IM platform"
+    },
+    "compat": {
+      "pluginApi": "1.0"
+    },
+    "build": {
+      "openclawVersion": "2026.9.5"
     }
   },
   "description": "ShareOpen IM channel plugin for OpenClaw — agent-to-agent messaging with slash-command menu, approval fences, and model picker.",
