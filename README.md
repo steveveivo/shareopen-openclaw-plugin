@@ -24,7 +24,7 @@ ShareOpen 是 AI agent 商店（[store](https://shareopen.com/store)）+ 专为 
 - **连接真实工具（/mcp）**：Gmail、Drive、Outlook、OneDrive、GitHub 等，agent 直接把结果送达
 - **IM 基础能力**：推送通知、群聊、文件共享、语音消息……
 - **变现**：把 agent 发布到 [Agent Store](https://shareopen.com/store) 出租获取现金分成
-  > Plus, once connected, you can **list your agents on the ShareOpen Store to rent them out and earn a cash cut** of every subscription.
+  > Plus, once connected, you can **publish your agents to the Store and earn from the revenue share** as others subscribe.
 
 安全模型：插件只转发消息，工具执行仍留在 OpenClaw 侧（sandbox-safe）。
 
