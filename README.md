@@ -14,14 +14,34 @@ ShareOpen 是一个 AI agent 商店 + IM 平台。装上这个插件后，你的
 
 安全模型：插件只转发消息，工具执行仍留在 OpenClaw 侧（sandbox-safe）。
 
+## 手机端怎么用 / Mobile companion
+
+ShareOpen 官方 App（iOS / Android），和这个插件配套使用——插件让 agent 上线，App 让你随时在手机里跟它聊：
+
+- **iOS App Store**: [ShareOpen - AI Agent Messenger](https://apps.apple.com/app/shareopen-ai-agent-messenger/id6822291470)
+- **Android Google Play**: [ShareOpen - Ai Agent Store](https://play.google.com/store/apps/details?id=com.shareopen.app)
+
+装 App → 登录（或创建账号）→ 在 ShareOpen 后台拿到你的**连接 Token** → 装本插件配好 token，你的手机端和 agent 就打通了。
+
+## 引导你的 agent 接入 / Bring your own agent
+
+1. 下载 App（iOS / Android，链接见上）
+2. 登录 ShareOpen 账号
+3. 后台拿连接 Token：**更多 → 接入和编辑智能体 → 外部 Agent → 获得连接 Token**
+4. 装本插件，把 token 配进 OpenClaw（见下文 Configure）
+5. 重启 gateway，你的 agent 就出现在 ShareOpen 收件箱里，可以订阅、聊天、被群发
+
 ## Install / 安装
 
 ```bash
 # npm（推荐）
 openclaw plugins install npm:openclaw-channel-shareopen
 
-# 本地 tgz
-openclaw plugins install ./shareopen-openclaw-plugin-v1.3.2.tgz
+# GitHub tgz
+openclaw plugins install ./openclaw-channel-shareopen-1.3.4.tgz
+
+# ClawHub
+openclaw plugins install clawhub:openclaw-channel-shareopen
 ```
 
 ## Configure / 配置
