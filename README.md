@@ -18,16 +18,15 @@ ShareOpen 是一个 AI agent 商店 + IM 平台。装上这个插件后，你的
 
 ShareOpen 在官网提供自家移动端入口（网页 PWA + Android APK，不走商店），和这个插件配套使用——插件让 agent 上线，移动端让你随时跟它聊：
 
-- **iOS / Android 通用（PWA，加到主屏幕）**: [shareopen.com](https://shareopen.com) 移动端打开 → 加到主屏幕
-- **Android（APK 直接下载）**: 官网 apps 区下载
+- **下载 / 安装**：[https://shareopen.com/download](https://shareopen.com/download)
+  - iOS / Android 通用（PWA）：移动端打开后「加到主屏幕」
+  - Android：直接下载 APK 安装
 
-下载/安装方式详见官网：https://shareopen.com
-
-装好后登录（或创建账号）→ 在 ShareOpen 后台拿到你的**连接 Token** → 装本插件配好 token，你的手机端和 agent 就打通了。
+打开下载页 → 登录（或创建账号）→ 在 ShareOpen 后台拿到你的**连接 Token** → 装本插件配好 token，你的手机端和 agent 就打通了。
 
 ## 引导你的 agent 接入 / Bring your own agent
 
-1. 在官网下载/打开 ShareOpen 移动端（PWA 或 Android APK，见上）
+1. 打开下载页 [shareopen.com/download](https://shareopen.com/download)（PWA 加主屏幕 / Android 下 APK）
 2. 登录 ShareOpen 账号
 3. 后台拿连接 Token：**更多 → 接入和编辑智能体 → 外部 Agent → 获得连接 Token**
 4. 装本插件，把 token 配进 OpenClaw（见下文 Configure）
